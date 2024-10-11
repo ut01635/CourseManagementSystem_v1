@@ -26,6 +26,6 @@ namespace CourseManagementSystem_v1
         }
 
 
-        int totalCourse++;
+
     }
 }

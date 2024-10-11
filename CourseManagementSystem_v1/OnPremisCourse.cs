@@ -11,7 +11,7 @@ namespace CourseManagementSystem_v1
         public string Schedule {  get; set; }
         public string ClassroomCapacity { get; set; }
 
-        public OnPremisCourse(string courseId, string title, string duration, decimal price, string schedule, string classroomCapacity) : base(courseId, title, duration, price)
+        public OnPremisCourse(int totalCourses, string courseId, string title, string duration, decimal price, string schedule, string classroomCapacity) : base(totalCourses,courseId, title, duration, price)
         {
             Schedule = schedule;
             ClassroomCapacity = classroomCapacity;

@@ -45,7 +45,7 @@ namespace CourseManagementSystem_v1
 
             if (courseId != null)
             {
-                var course = courses.FirstOrDefault(a => a.courseId == courseId);
+                var course = courses.FirstOrDefault(a => a.CourseId == courseId);
                 if (course != null)
                 {
                     course.Title = title;
@@ -67,29 +67,29 @@ namespace CourseManagementSystem_v1
 
         }
 
-        public void DeleteCourse(string Id)
-        {
+        //public void DeleteCourse(string Id)
+        //{
 
-            if (Id != null)
-            {
-                var course = courses.FirstOrDefault(c => c.CourseId == Id);
-                if (course != null)
-                {
-                    courses.Remove(course);
-                    Console.WriteLine("Course deleted successfully. ");
+        //    if (Id != null)
+        //    {
+        //        var course = courses.FirstOrDefault(c => c.CourseId == Id);
+        //        if (course != null)
+        //        {
+        //            courses.Remove(course);
+        //            Console.WriteLine("Course deleted successfully. ");
 
-                }
-                else
-                {
-                    Console.WriteLine("Course not found. ");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Invalid Course Id");
-            }
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("Course not found. ");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Invalid Course Id");
+        //    }
 
-        }
+        //}
 
 
         public decimal ValidateCoursePrice()

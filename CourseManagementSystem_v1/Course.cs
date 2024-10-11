@@ -8,8 +8,10 @@ namespace CourseManagementSystem_v1
 {
     public class Course
     {
-        static int TotalCourses { get; set; } = 0; 
-         private string courseId {  get; set; }
+        private string id;
+
+        //static int TotalCourses { get; set; } = 0; 
+        private string courseId {  get; set; }
          private string title { get; set; }
          private string Duration { get; set; }
          private decimal Price { get; set; }
@@ -17,10 +19,18 @@ namespace CourseManagementSystem_v1
 
         public Course(int totalCourse,string courseId, string title, string duration, decimal price)
         {
-            TotalCourses = totalCourse;
+            //TotalCourses = totalCourse;
             this.courseId = courseId;
             this.title = title;
              Duration = duration;
+            Price = price;
+        }
+
+        public Course(string id, string title, string duration, decimal price)
+        {
+            this.id = id;
+            this.title = title;
+            Duration = duration;
             Price = price;
         }
 
@@ -31,7 +41,7 @@ namespace CourseManagementSystem_v1
 
         public virtual string DisplayCourseInfo()
         {
-            return $"Total Course: {TotalCourses} ,ID: {courseId}, Title: {title}, Duration: {Duration}, Price: {Price}";
+            return $" ,ID: {courseId}, Title: {title}, Duration: {Duration}, Price: {Price}";
 
         }
 

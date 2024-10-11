@@ -116,7 +116,7 @@ namespace CourseManagementSystem_v1
                 decimal priceInput = decimal.Parse(Console.ReadLine());
 
 
-                manager1.(id, title, duration, priceInput);
+                //manager1.(id, title, duration, priceInput);
             }
 
 
