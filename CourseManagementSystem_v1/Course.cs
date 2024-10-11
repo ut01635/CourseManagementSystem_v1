@@ -26,7 +26,11 @@ namespace CourseManagementSystem_v1
             return $"ID: {courseId}, Title: {title}, Duration: {Duration}, Price: {Price}";
         }
 
-        public virtual 
+        public virtual string DisplayCourseInfo()
+        {
+            return $"ID: {courseId}, Title: {title}, Duration: {Duration}, Price: {Price}";
+
+        }
 
         //Course course1 = {  courseId: "C_001", 
         //                    title: "python for beginners", 

@@ -22,5 +22,10 @@ namespace CourseManagementSystem_v1
         {
             return $"Schedule: {Schedule}, ClassroomCapacity: {ClassroomCapacity}";
         }
+
+        public override string DisplayCourseInfo()
+        {
+            return base.DisplayCourseInfo() + this.DisplayOnPremisCourseInfo();
+        }
     }
 }

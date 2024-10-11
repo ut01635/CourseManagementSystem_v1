@@ -19,5 +19,10 @@ namespace CourseManagementSystem_v1
         {  
             return $"Course Link: {CourseLink}, FileSize: {FileSize}";
         }
+
+        public override string DisplayCourseInfo()
+        {
+            return base.DisplayCourseInfo() + this.DisplayDigitalCourseInfo();
+        }
     }
 }
