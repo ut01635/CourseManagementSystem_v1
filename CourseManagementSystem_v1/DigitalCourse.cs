@@ -1,4 +1,6 @@
-﻿namespace CourseManagementSystem_v1
+﻿using System.Diagnostics;
+
+namespace CourseManagementSystem_v1
 {
     public class DigitalCourse : Course
     {
@@ -7,8 +9,15 @@
 
         public DigitalCourse(string courseId, string title, string duration, decimal price, string courseLink, string fileSize) : base(courseId, title, duration, price)
         {
-            CourseLink = fileSize;
-            FileSize = courseLink;
+           
+            CourseLink = courseLink;
+            FileSize = fileSize;
+        }
+
+
+        public string DisplayDigitalCourseInfo()
+        {  
+            return $"Course Link: {CourseLink}, FileSize: {FileSize}";
         }
     }
 }

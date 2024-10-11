@@ -16,5 +16,11 @@ namespace CourseManagementSystem_v1
             Schedule = schedule;
             ClassroomCapacity = classroomCapacity;
         }
+
+
+        public string DisplayOnPremisCourseInfo()
+        {
+            return $"Schedule: {Schedule}, ClassroomCapacity: {ClassroomCapacity}";
+        }
     }
 }
