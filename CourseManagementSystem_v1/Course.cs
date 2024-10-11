@@ -8,13 +8,16 @@ namespace CourseManagementSystem_v1
 {
     public class Course
     {
+        static int TotalCourses { get; set; } = 0; 
          private string courseId {  get; set; }
          private string title { get; set; }
          private string Duration { get; set; }
          private decimal Price { get; set; }
 
-        public Course(string courseId, string title, string duration, decimal price)
+
+        public Course(int totalCourse,string courseId, string title, string duration, decimal price)
         {
+            TotalCourses = totalCourse;
             this.courseId = courseId;
             this.title = title;
              Duration = duration;
@@ -28,7 +31,7 @@ namespace CourseManagementSystem_v1
 
         public virtual string DisplayCourseInfo()
         {
-            return $"ID: {courseId}, Title: {title}, Duration: {Duration}, Price: {Price}";
+            return $"Total Course: {TotalCourses} ,ID: {courseId}, Title: {title}, Duration: {Duration}, Price: {Price}";
 
         }
 

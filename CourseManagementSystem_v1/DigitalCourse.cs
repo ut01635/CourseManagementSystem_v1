@@ -24,5 +24,8 @@ namespace CourseManagementSystem_v1
         {
             return base.DisplayCourseInfo() + this.DisplayDigitalCourseInfo();
         }
+
+
+        int totalCourse++;
     }
 }
